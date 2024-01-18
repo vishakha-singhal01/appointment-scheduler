@@ -34,11 +34,11 @@ const ClientRow = ({ client, onUpdate }) => {
     <>
     <section className='flex bg-white shadow-md rounded-md mx-4 mt-4 mb-1 p-4 justify-between'>
     <div className=''>
-      <div className='mx-1 p-1'>
-      <span className='me-1 font-semibold text-black text-2xl'>
+      <div className='mx-1 p-1 text-base sm:text-2xl font-serif'>
+      <span className='me-1 font-semibold text-black'>
         {isEditing ? (
           <input
-          className='border border-spacing-0'
+          className='border border-spacing-0 w-32 sm:w-40'
             type="text"
             name="firstName"
             value={editedClient.firstName}
@@ -48,10 +48,10 @@ const ClientRow = ({ client, onUpdate }) => {
           client.firstName
         )}
       </span>
-      <span className='font-semibold text-black text-2xl'>
+      <span className='font-semibold text-black'>
         {isEditing ? (
           <input
-          className='border border-spacing-0'
+          className='border border-spacing-0 w-32 sm:w-40'
             type="text"
             name="lastName"
             value={editedClient.lastName}
@@ -62,10 +62,10 @@ const ClientRow = ({ client, onUpdate }) => {
         )}
       </span >
       </div>
-      <div className='p-1 m-1 font-semibold'>
+      <div className='p-1 m-1 text-base sm:font-semibold font-serif'>
         {isEditing ? (
           <input
-          className='border border-spacing-0'
+          className='border border-spacing-0 w-32 sm:w-40'
             type="text"
             name="location"
             value={editedClient.location}
@@ -79,12 +79,12 @@ const ClientRow = ({ client, onUpdate }) => {
       <div>
         {isEditing ? (
           <>
-            <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md m-2' onClick={handleSaveClick}>Save</button>
-            <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md m-2' onClick={handleCancelClick}>Cancel</button>
+            <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md m-2 w-24 text-xs sm:text-base sm:w-30' onClick={handleSaveClick}>Save</button>
+            <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md m-2 w-24 text-xs sm:text-base sm:w-30' onClick={handleCancelClick}>Cancel</button>
           </>
         ) : (
           <div className='flex'>
-          <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mx-2' onClick={handleEditClick}>✏️</button>
+          <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mx-2 w-10 h-12 sm:w-10 sm:h-10' onClick={handleEditClick}>✏️</button>
           </div>
           
         )}

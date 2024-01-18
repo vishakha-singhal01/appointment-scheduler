@@ -49,7 +49,7 @@ const AppointmentEdit = ({ onSave, onCancel, selectedAppointment }) => {
   return (
     <div>
       {/* Date and time picker */}
-      <div className='flex flex-col my-2'>
+      <div className='flex flex-col mb-2'>
         <label className='font-bold m-1'>Date:</label>
         <input
           className='border border-spacing-3 rounded-sm bg-green-100'
@@ -69,10 +69,10 @@ const AppointmentEdit = ({ onSave, onCancel, selectedAppointment }) => {
       </div>
 
       {/* Buttons for adding/editing appointments */}
-      <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md me-1' onClick={handleSaveClick}>
+      <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md me-1 text-xs sm:text-base sm:w-30' onClick={handleSaveClick}>
         {selectedAppointment ? 'Edit Appointment' : 'Add'}
       </button>
-      <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md' onClick={handleCancelClick}>Cancel</button>
+      <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md text-xs sm:text-base sm:w-30' onClick={handleCancelClick}>Cancel</button>
 
       {/* Display notifications */}
       <NotificationPage notification={notification} onClose={handleNotificationClose} />

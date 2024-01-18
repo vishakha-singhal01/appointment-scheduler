@@ -64,15 +64,15 @@ const AppointmentPage = () => {
       )}
 
       {/* Render a button to open the editor */}
-      <div className='flex flex-col sm:flex-row items-center'>
+      <div className='flex flex-row items-center mt-0 sm:mt-4'>
       <button
-        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mt-4 me-2"
+        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mt-0 me-1 mb-1 w-24 text-xs sm:text-base sm:w-40"
         onClick={() => setShowEditor(true)}
       >
         Add Appointment
       </button>
       <button
-        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mt-4 mx-2 sm:mb-1"
+        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mt-0 mb-1 w-10 h-12 sm:w-10 sm:h-10"
         onClick={handleShowCalendar}
       >
         📅
@@ -81,22 +81,28 @@ const AppointmentPage = () => {
 
       {/* Render existing appointments */}
       {appointments.map((appointment, index) => (
-        <div key={index}>
-          <span className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-2 text-white rounded-md me-2">{appointment.date} - {appointment.time}</span>
-          <button
-            className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-2 mt-4 mx-1 rounded-md"
-            onClick={() => handleEditAppointment(appointment)}
-          >
-            ✏️
-          </button>
-          <button
-            className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-2 rounded-md"
-            onClick={() => handleDeleteAppointment(appointment)}
-          >
-            🧹
-          </button>
-        </div>
-      ))}
+  <div key={index} className="flex flex-row sm:flex-row sm:items-center">
+    <span className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-2 text-white rounded-md mb-1 sm:mb-0 me-1 mt-4 sm:mt-0 w-24 text-xs sm:text-base sm:w-40">
+      {appointment.date} - {appointment.time}
+    </span>
+    <div className="flex">
+      <button
+        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-2 me-1 rounded-md mt-4 sm:mt-0 mb-1 w-10 h-12 sm:w-10 sm:h-10"
+        onClick={() => handleEditAppointment(appointment)}
+      >
+        ✏️
+      </button>
+      <button
+        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-2 rounded-md  mt-4 sm:mt-0 mb-1 w-10 h-12 sm:w-10 sm:h-10"
+        onClick={() => handleDeleteAppointment(appointment)}
+      >
+        🧹
+      </button>
+    </div>
+  </div>
+))}
+
+
 
       {/* Render CalendarPage conditionally */}
       {showCalendar && (
@@ -105,9 +111,6 @@ const AppointmentPage = () => {
           onClose={handleHideCalendar}
         />
       )}
-
-      {/* Button to show the calendar */}
-      
     </div>
   );
 };
