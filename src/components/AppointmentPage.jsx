@@ -66,7 +66,7 @@ const AppointmentPage = () => {
       {/* Render a button to open the editor */}
       <div className='flex flex-row items-center mt-0 sm:mt-4'>
       <button
-        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mt-0 me-1 mb-1 w-24 text-xs sm:text-base sm:w-40"
+        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mt-2 sm:mt-0 me-1 mb-1 w-24 text-xs sm:text-base sm:w-40"
         onClick={() => setShowEditor(true)}
       >
         Add Appointment
