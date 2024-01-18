@@ -72,7 +72,7 @@ const AppointmentPage = () => {
         Add Appointment
       </button>
       <button
-        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mt-0 mb-1 w-10 h-12 sm:w-10 sm:h-10"
+        className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mt-2 sm:mt-0 mb-1 w-10 h-12 sm:w-10 sm:h-10"
         onClick={handleShowCalendar}
       >
         📅
