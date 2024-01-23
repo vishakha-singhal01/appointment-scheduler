@@ -10,6 +10,11 @@
 6) Aesthetically pleasing UI, user-friendly, and fully responsive.
 6) Informative error messages like all fields required and notifications for successful actions for appointments edited, or deleted.
 
+## How it looks 
+![HomePage](./src/images/3.jpg)
+![HomePage](./src/images/2.jpg) 
+![HomePage](./src/images/1.jpg)
+
 ## Tech Stack
 1) HTML
 2) CSS
